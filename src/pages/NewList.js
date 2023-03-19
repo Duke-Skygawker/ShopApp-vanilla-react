@@ -94,11 +94,10 @@ const NewList = () => {
     localStorage.setItem('list', JSON.stringify(list));
   }, [list]);
   return (
-    <div className="grid-container">
+    <div className="container">
       <br />
-      <div className="grid-x" style={{ backgroundColor: '#fff' }}>
-        <div className="cell small-5"></div>
-        <h2 className="" style={{ color: '#2c3840' }}>
+      <div>
+        <h2 className="" style={{}}>
           <b>NEW LIST</b>
         </h2>
       </div>
