@@ -1,3 +1,4 @@
+import React from 'react';
 import { IoBanSharp, IoDocumentTextOutline } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 const Items = ({ items, removeItem, editItem }) => {
