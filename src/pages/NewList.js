@@ -133,7 +133,9 @@ const NewList = () => {
             </div>
             <div className="cell small-2">
               <label htmlFor="">
-                <span className="primary label">Price per item </span>
+                <span className="p-1" title="Add the price of a single item">
+                  Price per item{' '}
+                </span>
                 <input
                   type="number"
                   placeholder="Price"
@@ -144,9 +146,10 @@ const NewList = () => {
             </div>
             <div className="">
               <button
+                title="Add new item to the list"
                 type="submit"
                 style={{ marginTop: '1.4rem' }}
-                className="success button tiny"
+                className="bg-success button tiny"
                 value={price}
               >
                 <IconContext.Provider value={{ size: '1.5rem' }}>
@@ -186,7 +189,9 @@ const NewList = () => {
           </div>
         )}
       </div>
-      <div className="expanded button">Add list from template</div>
+      <button className="expanded button" title="Add list from template">
+        Add list from template
+      </button>
     </div>
   );
 };
