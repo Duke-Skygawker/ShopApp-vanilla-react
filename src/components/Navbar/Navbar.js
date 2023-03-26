@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function MainNavbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isDropdownExpnanded, setIsDropdownExpanded] = useState(false);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
@@ -87,8 +88,12 @@ function MainNavbar() {
               <a className="nav-link disabled">Disabled</a>
             </li> //might need later */}
           </ul>
-          <button className="btn btn-outline-danger" type="submit">
-            Logout
+          <button
+            className={isUserLoggedIn ? 'btn btn-danger' : 'btn btn-success'}
+            type="submit"
+            value={isUserLoggedIn}
+          >
+            Login
           </button>
         </div>
       </div>
