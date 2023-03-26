@@ -94,7 +94,7 @@ const NewList = () => {
     localStorage.setItem('list', JSON.stringify(list));
   }, [list]);
   return (
-    <div className="container">
+    <div className="container text-center">
       <br />
       <div>
         <h2 className="" style={{}}>
