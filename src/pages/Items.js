@@ -15,6 +15,7 @@ const Items = ({ items, removeItem, editItem }) => {
               <td>{total}$</td>
               <td>
                 <button
+                  title="Modify item in the list"
                   type="button"
                   style={{ marginTop: '0', marginBottom: '0' }}
                   className="btn btn-warning btn-sm"
@@ -27,6 +28,7 @@ const Items = ({ items, removeItem, editItem }) => {
               </td>
               <td>
                 <button
+                  title="Remove item from the list"
                   type="submit"
                   style={{ marginTop: '0', marginBottom: '0' }}
                   className="btn btn-danger btn-sm"

@@ -8,9 +8,9 @@ function MainNavbar() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand mb-2" href="#">
+        <Link className="navbar-brand mb-2" to="/">
           ShoppApp
-        </a>
+        </Link>
         <button
           className={
             isNavExpanded ? 'navbar-toggler show' : 'navbar-toggler collapsed'
@@ -34,11 +34,11 @@ function MainNavbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 h5">
-            <li className="nav-item ">
+            {/* <li className="nav-item ">
               <Link className="nav-link" to="/">
                 Home
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <Link className="nav-link" to="/items">
                 Items
@@ -83,11 +83,11 @@ function MainNavbar() {
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link disabled">Disabled</a>
-            </li>
+            </li> //might need later */}
           </ul>
-          <button className="btn btn-outline-success" type="submit">
+          <button className="btn btn-outline-danger" type="submit">
             Logout
           </button>
         </div>

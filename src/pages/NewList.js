@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IoIosAddCircleOutline } from 'react-icons/io';
+import { IoIosAddCircleOutline, IoIosTrash } from 'react-icons/io';
 import { IconContext } from 'react-icons';
 import Alert from '../hooks/Alert';
 import Items from './Items';
@@ -109,6 +109,7 @@ const NewList = () => {
             Name of the item
           </label>
           <input
+            title="Field for the name of the item"
             type="text"
             placeholder="Product"
             id="inputItemName"
@@ -122,6 +123,7 @@ const NewList = () => {
             Number of items
           </label>
           <input
+            title="Field for the number of the item"
             type="number"
             name="quantity"
             min="1"
@@ -139,6 +141,7 @@ const NewList = () => {
             Price per item
           </label>
           <input
+            title="Field for the price of the item"
             type="number"
             placeholder="Price"
             step="any"
@@ -148,17 +151,19 @@ const NewList = () => {
             id="inputPricePerItem"
           />
         </div>
-        <div className="">
+        <div className="d-grid mx-auto col-5 gap-2">
           <button
             title="Add new item to the list"
             type="submit"
             style={{ marginTop: '1.4rem' }}
-            className="bg-success button tiny"
+            className="btn btn-success fs-5"
             value={price}
           >
-            <IconContext.Provider value={{ size: '1.5rem' }}>
-              <IoIosAddCircleOutline />
-            </IconContext.Provider>
+            Add Item to the list
+            <IoIosAddCircleOutline
+              className="ms-3 pb-1"
+              style={{ fontSize: '2rem' }}
+            />
           </button>
         </div>
       </form>
@@ -185,13 +190,25 @@ const NewList = () => {
                 <h4>{fullTotal.reduce((a, b) => a + b, 0)}$</h4>
               </div>
             </div>
-            <div className="alert expanded button" onClick={clearList}>
-              CLEAR THE LIST
+
+            <div class="d-grid mx-auto col-6 gap-2">
+              <button
+                title="Clears the list."
+                className="btn btn-danger fs-5"
+                type="button"
+                onClick={clearList}
+              >
+                Clear the list
+                <IoIosTrash className="ms-3 fs-4 pb-1" />
+              </button>
             </div>
           </div>
         )}
       </div>
-      <button className="expanded button" title="Add list from template">
+      <button
+        className="expanded button collapse"
+        title="Add list from template"
+      >
         Add list from template
       </button>
     </div>
