@@ -88,11 +88,7 @@ function MainNavbar() {
               <a className="nav-link disabled">Disabled</a>
             </li> //might need later */}
           </ul>
-          <button
-            className={isUserLoggedIn ? 'btn btn-danger' : 'btn btn-success'}
-            type="submit"
-            value={isUserLoggedIn}
-          >
+          <button className="btn btn-outline-success" type="button">
             Login
           </button>
         </div>
