@@ -102,66 +102,68 @@ const NewList = () => {
         </h2>
       </div>
       <br />
-      <form onSubmit={handleSubmit}>
+      <form className="row g-3" onSubmit={handleSubmit}>
         {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
-        <div className="grid-container">
-          <div className="grid-x">
-            <div className="cell small-6">
-              <label htmlFor="">
-                <span className="primary label">Name of the item</span>
-                <input
-                  type="text"
-                  placeholder="Product"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </label>
-            </div>
-            <div className="cell small-2">
-              <label htmlFor="">
-                <span className="primary label">Number of items</span>
-                <input
-                  type="number"
-                  name="quantity"
-                  min="1"
-                  max="1000"
-                  placeholder="Quantity"
-                  value={quantity}
-                  onChange={(e) => setQuantity(e.target.value)}
-                />
-              </label>
-            </div>
-            <div className="cell small-2">
-              <label htmlFor="">
-                <span className="p-1" title="Add the price of a single item">
-                  Price per item{' '}
-                </span>
-                <input
-                  type="number"
-                  placeholder="Price"
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
-                />
-              </label>
-            </div>
-            <div className="">
-              <button
-                title="Add new item to the list"
-                type="submit"
-                style={{ marginTop: '1.4rem' }}
-                className="bg-success button tiny"
-                value={price}
-              >
-                <IconContext.Provider value={{ size: '1.5rem' }}>
-                  <IoIosAddCircleOutline />
-                </IconContext.Provider>
-              </button>
-            </div>
-          </div>
+        <div class="col-md-4">
+          <label for="inputItemName" className="form-label">
+            Name of the item
+          </label>
+          <input
+            type="text"
+            placeholder="Product"
+            id="inputItemName"
+            className="form-control"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputNumberOfItems" className="form-label">
+            Number of items
+          </label>
+          <input
+            type="number"
+            name="quantity"
+            min="1"
+            max="1000"
+            step="any"
+            placeholder="Quantity"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+            class="form-control"
+            id="inputNumberOfItems"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputPricePerItem" className="form-label">
+            Price per item
+          </label>
+          <input
+            type="number"
+            placeholder="Price"
+            step="any"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            class="form-control"
+            id="inputPricePerItem"
+          />
+        </div>
+        <div className="">
+          <button
+            title="Add new item to the list"
+            type="submit"
+            style={{ marginTop: '1.4rem' }}
+            className="bg-success button tiny"
+            value={price}
+          >
+            <IconContext.Provider value={{ size: '1.5rem' }}>
+              <IoIosAddCircleOutline />
+            </IconContext.Provider>
+          </button>
         </div>
       </form>
       <div className="expanded button invisible"></div>
-      <div className="grid-container" style={{ fontSize: '1.2rem' }}>
+      <div className="container" style={{ fontSize: '1.2rem' }}>
         {list.length > 0 && (
           <div>
             <table className="table table-striped">
