@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Home = () => {
   return (
-    <div class="container text-center">
-      <div class="row">
-        <div class="col bg-primary">
+    <div className="container text-center">
+      <div className="row">
+        <div className="col bg-primary">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
             enim mauris. Quisque a pharetra justo, eget condimentum justo.
@@ -13,7 +13,7 @@ const Home = () => {
             pulvinar.
           </p>
         </div>
-        <div class="col-7 bg-success">
+        <div className="col-7 bg-success">
           <h1>HOME</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
@@ -47,7 +47,7 @@ const Home = () => {
             iaculis gravida.
           </p>
         </div>
-        <div class="col bg-primary">
+        <div className="col bg-primary">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu
             enim mauris. Quisque a pharetra justo, eget condimentum justo.
