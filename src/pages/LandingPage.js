@@ -3,12 +3,12 @@ import './LandingPage.css';
 
 const LandingPage = () => {
   return (
-    <div className="container text-center">
+    <div className="container bg-main text-center">
       <div className="row">
-        <div className="col bg-primary"></div>
-        <div className="col-8 pt-5 bg-success ">
+        <div className="col"></div>
+        <div className="col-8 pt-5 bg-main ">
           <h1 className="py-5">WELCOME TO SHOPPAPP</h1>
-          <form className="form border border-3 border-primary p-4 rounded ">
+          <form className="form border border-3 border-primary p-4 m-4 rounded ">
             <div className="mb-3">
               <label for="exampleInputEmail1" className="form-label">
                 Email address
@@ -50,9 +50,7 @@ const LandingPage = () => {
             </div>
           </form>
         </div>
-        <div className="col bg-primary">
-          
-        </div>
+        <div className="col"></div>
       </div>
     </div>
   );
