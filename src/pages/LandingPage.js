@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LandingPage.css';
 
 const LandingPage = () => {
+  const handleLogin = (e) => {
+    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+    e.preventDefault();
+    setIsUserLoggedIn(true);
+    console.log(isUserLoggedIn);
+    return isUserLoggedIn;
+  };
+
   return (
     <div className="container bg-main text-center">
       <div className="row">
@@ -10,13 +18,13 @@ const LandingPage = () => {
           <h1 className="py-5">WELCOME TO SHOPPAPP</h1>
           <form className="form border border-3 border-primary p-4 m-4 rounded ">
             <div className="mb-3">
-              <label for="exampleInputEmail1" className="form-label">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
               </label>
               <input
                 type="email"
                 className="form-control"
-                id="exampleInputEmail1"
+                id="InputEmail"
                 aria-describedby="emailHelp"
               />
               <div
@@ -27,8 +35,8 @@ const LandingPage = () => {
                 Please login.
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" className="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
               </label>
               <input
@@ -37,7 +45,12 @@ const LandingPage = () => {
                 id="exampleInputPassword1"
               />
             </div>
-            <button type="submit" className="btn btn-outline-warning">
+            <button
+              type="submit"
+              id="login button"
+              className="btn btn-outline-warning"
+              onClick={handleLogin}
+            >
               Login
             </button>
             <div>

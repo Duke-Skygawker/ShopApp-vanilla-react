@@ -1,7 +1,11 @@
 a {
   text-decoration: none;
-  color: #21ff74;
+  color: #0bffff;
   margin-left: 1em;
+}
+
+.signup-link {
+  text-decoration: none;
 }
 
 .bg-main {
