@@ -8,7 +8,7 @@ function MainNavbar() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand mb-2" to="/">
+        <Link className="navbar-brand mb-2" to="home">
           ShoppApp
         </Link>
         <button

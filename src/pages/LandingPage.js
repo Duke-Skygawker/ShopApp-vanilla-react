@@ -3,13 +3,7 @@ import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
-  const handleLogin = (e) => {
-    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-    e.preventDefault();
-    setIsUserLoggedIn(true);
-    console.log(isUserLoggedIn);
-    return isUserLoggedIn;
-  };
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 
   return (
     <div className="container bg-main text-center">
@@ -50,7 +44,10 @@ const LandingPage = () => {
               type="submit"
               id="login button"
               className="btn btn-outline-warning"
-              onClick={handleLogin}
+              onClick={() => {
+                setIsUserLoggedIn(!isUserLoggedIn);
+                console.log(isUserLoggedIn);
+              }}
             >
               Login
             </button>
