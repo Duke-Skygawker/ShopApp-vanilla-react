@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 function MainNavbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [isDropdownExpnanded, setIsDropdownExpanded] = useState(false);
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">

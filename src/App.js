@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainNavbar from './components/Navbar/Navbar.js';
 import LandingPage from './pages/LandingPage';
+import SignupPage from './pages/SignupPage';
 import Home from './pages/Home';
 import Items from './pages/Items';
 import NewList from './pages/NewList';
@@ -14,6 +15,7 @@ export default function App() {
         <MainNavbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="items" element={<Items />} />
           <Route path="newlist" element={<NewList />} />

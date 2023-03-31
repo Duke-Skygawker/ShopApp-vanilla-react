@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
-const LandingPage = () => {
+const SignupPage = () => {
   const handleLogin = (e) => {
     const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
     e.preventDefault();
@@ -16,7 +16,7 @@ const LandingPage = () => {
       <div className="row">
         <div className="col"></div>
         <div className="col-8 pt-5 bg-main ">
-          <h1 className="py-5">WELCOME TO SHOPPAPP</h1>
+          <h1 className="py-5">CREATE AN ACCOUNT</h1>
           <form className="form border border-3 border-primary p-4 m-4 rounded ">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
@@ -28,17 +28,20 @@ const LandingPage = () => {
                 id="InputEmail"
                 aria-describedby="emailHelp"
               />
-              <div
-                id="emailHelp"
-                className="form-text"
-                style={{ color: '#21FF74' }}
-              >
-                Please login.
-              </div>
             </div>
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
+              </label>
+              <input
+                type="password"
+                className="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
+                Confirm Password
               </label>
               <input
                 type="password"
@@ -52,13 +55,13 @@ const LandingPage = () => {
               className="btn btn-outline-warning"
               onClick={handleLogin}
             >
-              Login
+              Signup
             </button>
             <div>
               <p className="mt-5 mb-1">
-                Don't have an account?
-                <Link className="signup-link" to="signup">
-                  Signup
+                Have an account?
+                <Link className="signup-link" to="/">
+                  Login
                 </Link>
               </p>
             </div>
@@ -70,4 +73,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default SignupPage;
